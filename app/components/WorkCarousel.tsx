@@ -52,6 +52,8 @@ export default function WorkCarousel() {
   const [centerSlot, setCenterSlot] = useState(0);
   const centerSlotRef = useRef(0);
 
+  const [audioReady, setAudioReady] = useState(false);
+
 
   const containerRef = useRef<HTMLDivElement>(null);
   const reelRef      = useRef<HTMLDivElement>(null); // drag hit zone
@@ -86,6 +88,7 @@ export default function WorkCarousel() {
         const r       = await fetch("/audio/ratchet.mp3");
         const arrBuf  = await r.arrayBuffer();
         audioBuffer.current = await ctx.decodeAudioData(arrBuf);
+        setAudioReady(true);
       } catch {}
     };
     document.addEventListener("pointerdown", unlock, { once: true });
@@ -469,6 +472,15 @@ export default function WorkCarousel() {
           />
         ))}
       </div>
+
+      {/* Audio unlock hint — fades out once audio is ready */}
+      {!audioReady && (
+        <div className="fixed bottom-5 left-1/2 -translate-x-1/2 z-50 pointer-events-none">
+          <p className="font-mono text-[10px] text-black/30 uppercase tracking-widest">
+            Click anywhere to enable audio
+          </p>
+        </div>
+      )}
 
       {/* Screen reader live region */}
       <div className="sr-only" aria-live="polite" aria-atomic="true">

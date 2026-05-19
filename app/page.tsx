@@ -3,7 +3,7 @@ import WorkCarousel from "./components/WorkCarousel";
 
 export default function Home() {
   return (
-    <main className="relative w-full h-full bg-[#f0f0f0]">
+    <main className="relative w-full h-screen bg-[#f0f0f0]">
       <CornerNav />
       <WorkCarousel />
     </main>
