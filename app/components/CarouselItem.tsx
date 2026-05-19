@@ -55,8 +55,8 @@ export default function CarouselItem({
 
   return (
     <motion.div
-      className={`absolute left-0 top-1/2${isActive ? "" : " cursor-pointer"}`}
-      style={{ width, height, x, y, opacity, filter, zIndex }}
+      className={`absolute left-0${isActive ? "" : " cursor-pointer"}`}
+      style={{ top: "50%", width, height, x, y, opacity, filter, zIndex }}
     >
       <Image
         src={project.image}
