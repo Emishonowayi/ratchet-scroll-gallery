@@ -410,7 +410,7 @@ export default function WorkCarousel() {
   // centerSlot changes many times/sec during fast scroll; debouncing prevents
   // AnimatePresence from building up a queue of stacked exit animations.
   const [metaProject, setMetaProject] = useState(projects[mod(0, TOTAL)]);
-  const metaTimer = useRef<ReturnType<typeof setTimeout>>();
+  const metaTimer = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
   useEffect(() => {
     clearTimeout(metaTimer.current);
     metaTimer.current = setTimeout(() => {
