@@ -27,8 +27,8 @@ export const DEFAULT_PARAMS: CarouselParams = {
   snapThreshold: 0.05,
   snapStrength: 0.3,
   snapDamping: 0.5,
-  stepThreshold: 50,
-  flingThreshold: 40,
+  stepThreshold: 100,
+  flingThreshold: 60,
 };
 
 // ─── Reel container height (computed from Figma slot positions) ───────────────
@@ -60,6 +60,7 @@ export default function WorkCarousel() {
   const rafRef       = useRef<number>(0);
   const phys         = useRef({ velocity: 0, running: false });
   const paramsRef    = useRef<CarouselParams>({ ...DEFAULT_PARAMS });
+
 
   // Step/fling scroll accumulator
   const scrollAccum = useRef({ delta: 0, flinging: false, flingTimer: 0 });
