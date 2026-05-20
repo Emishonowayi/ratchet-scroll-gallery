@@ -10,7 +10,7 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: 1,
-    title: "ADIDASXPARLEY COLLABORATION",
+    title: "MONT BLANC JACQUARD",
     category: "BRANDING & WEBSITE DESIGN",
     year: "2025",
     image: "/images/project-01.png",
