@@ -26,8 +26,10 @@ export default function IntroScreen() {
             transition={{ duration: 0.5, ease: [0.25, 0.1, 0.25, 1] }}
             onClick={() => setExiting(true)}
           >
-            <p className="font-mono text-[14px] text-black uppercase text-center leading-[1.4] max-w-[560px] px-5">
-              This website uses sound. Click anywhere to continue with sound on.
+            <p className="font-mono text-[14px] text-black uppercase text-center leading-[1.4]">
+              This website uses sound.
+              <br />
+              Click anywhere to continue with sound on.
             </p>
           </motion.div>
         )}
