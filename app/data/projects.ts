@@ -10,10 +10,10 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: 1,
-    title: "MONT BLANC JACQUARD CAMPAIGN",
-    category: "BRANDING & WEBSITE DESIGN",
-    year: "2025",
-    image: "/images/project-01.png",
+    title: "RALPH SIMONS REDUX",
+    category: "ARCHIVAL DESIGN & BOOK",
+    year: "2023",
+    image: "/images/project-08.jpg",
     index: "01/20",
   },
   {
@@ -66,10 +66,10 @@ export const projects: Project[] = [
   },
   {
     id: 8,
-    title: "RAF SIMONS REDUX",
-    category: "ARCHIVAL DESIGN & BOOK",
-    year: "2023",
-    image: "/images/project-08.jpg",
+    title: "MONT BLANC JACQUARD CAMPAIGN",
+    category: "BRANDING & WEBSITE DESIGN",
+    year: "2025",
+    image: "/images/project-01.png",
     index: "08/20",
   },
   {
