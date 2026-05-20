@@ -15,6 +15,15 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Studio Agar — Work Archive",
   description: "A curated visual archive of creative work by Studio Agar.",
+  openGraph: {
+    title: "Studio Agar — Work Archive",
+    description: "A curated visual archive of creative work by Studio Agar.",
+    images: [{ url: "/og-image.png", width: 1440, height: 810 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: ["/og-image.png"],
+  },
 };
 
 export default function RootLayout({
